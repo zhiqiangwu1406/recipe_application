@@ -39,6 +39,7 @@ function Header() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           onKeyDown={searchItem}
+          placeholder=" Search..."
         />
       </div>
     </header>
