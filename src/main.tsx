@@ -7,23 +7,28 @@ import Layout from "./Layout/Layout";
 import About from "./Pages/About";
 import Error from "./Pages/404";
 import RecipePage from "./Pages/RecipePage";
+// import SearchResults from "./Pages/SearchResults";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/recipe_application/",
     element: <Layout />,
     children: [
       {
-        index: true,
+        path: "/recipe_application/home",
         element: <Home />,
       },
       {
-        path: "/about",
+        path: "/recipe_application/about",
         element: <About />,
       },
       {
-        path: "/recipes/:id",
+        path: "/recipe_application/recipes/:id",
         element: <RecipePage />,
+      },
+      {
+        path: "/recipe_application/search/:search",
+        element: <Home />,
       },
     ],
     errorElement: <Error />,
